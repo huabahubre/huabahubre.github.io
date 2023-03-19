@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1600 height=900></canvas>
+      <canvas id="unity-canvas" width=800 height=450></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/docs.loader.js";
       var config = {
-        dataUrl: buildUrl + "/de7b4dd68a6742c98b823095b3e683ab.data",
+        dataUrl: buildUrl + "/a7b1b2bde492b1e11c475223e226fe81.data",
         frameworkUrl: buildUrl + "/93c12774b5f1c4eec5422e9e86c20472.js",
-        codeUrl: buildUrl + "/daea7f69e0faba6b081e6996f79183ea.wasm",
+        codeUrl: buildUrl + "/e30b546d3f2650c6552fc589b2b3abbb.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "hubre",
         productName: "Coinracer",
@@ -93,8 +93,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1600px";
-        canvas.style.height = "900px";
+        canvas.style.width = "800px";
+        canvas.style.height = "450px";
       }
 
       loadingBar.style.display = "block";
