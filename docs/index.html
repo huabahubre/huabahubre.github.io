@@ -126,21 +126,24 @@
 
   <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries#
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyDvidcN9Kntg-7XSHkFTRiOdTL2J6Afw3c",
       authDomain: "coinracer-launch-tournament.firebaseapp.com",
+      databaseURL: "https://coinracer-launch-tournament-default-rtdb.firebaseio.com",
       projectId: "coinracer-launch-tournament",
       storageBucket: "coinracer-launch-tournament.appspot.com",
       messagingSenderId: "661358695325",
       appId: "1:661358695325:web:ecc4e1f27f8f1a74751574"
     };
+
     // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
+    const app = initializeApp(firebaseConfig);
+  </script>
   </script>
 </body>
 
