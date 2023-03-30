@@ -60,15 +60,15 @@
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/docs.loader.js";
     var config = {
-      dataUrl: buildUrl + "/7d27802e52d3b3e3c3cdf4b8aadc4d5b.data",
-      frameworkUrl: buildUrl + "/e6235862621f851246a14918369f3e37.js",
-      codeUrl: buildUrl + "/95506253ee43c00095eda89d0eaecb49.wasm",
-      streamingAssetsUrl: "StreamingAssets",
+      dataUrl: buildUrl + "/0bb4654fc9ad2257b70a577db8151f55.data",
+      frameworkUrl: buildUrl + "/c951f335b03ed1ce421a1a2d4c3d2a4e.js",
+        codeUrl: buildUrl + "/395cb645f92f0255574d75a3638ce30c.wasm",
+        streamingAssetsUrl: "StreamingAssets",
       companyName: "hubre",
-      productName: "Coinracer",
-      productVersion: "0.1b",
-      showBanner: unityShowBanner,
-    };
+    productName: "Coinracer",
+    productVersion: "0.1b",
+    showBanner: unityShowBanner,
+      };
 
     // By default Unity keeps WebGL canvas render target size matched with
     // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -118,6 +118,7 @@
     };
     document.body.appendChild(script);
   </script>
+
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
@@ -142,6 +143,8 @@
 
     // Initialize Firebase
     const app = firebase.initializeApp(firebaseConfig);
+    
+    const db = app.firestore();
     const auth = app.auth();
   </script>
 </body>
