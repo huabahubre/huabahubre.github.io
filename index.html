@@ -63,7 +63,7 @@
       frameworkUrl: buildUrl + "/Junk Demon.framework.js.gz",
         codeUrl: buildUrl + "/Junk Demon.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-      companyName: "DefaultCompany",
+      companyName: { { { JSON.stringify(COMPANY_NAME) } } },
     productName: { { { JSON.stringify(PRODUCT_NAME) } } },
     productVersion: { { { JSON.stringify(PRODUCT_VERSION) } } },
     showBanner: unityShowBanner,
@@ -98,6 +98,7 @@
       canvas.style.height = "1080px";
     }
 
+    canvas.style.background = "url('" + buildUrl + "/Junk Demon.jpg.gz') center / cover";
     loadingBar.style.display = "block";
 
     var script = document.createElement("script");
@@ -123,16 +124,13 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-
   <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
     // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
       apiKey: "AIzaSyA6WuJdyyZeVttZVjF0h8v8F49yLoF0FME",
       authDomain: "junkdemon-244d1.firebaseapp.com",
@@ -144,10 +142,13 @@
     };
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    const app = firebase.initializeApp(firebaseConfig);
+
     const db = app.firestore();
     const auth = app.auth();
+
+
+
   </script>
 </body>
 
